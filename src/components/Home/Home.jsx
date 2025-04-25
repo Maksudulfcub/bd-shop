@@ -5,7 +5,7 @@ import OurProducts from "../OurProducts/OurProducts";
 
 const Home = () => {
     return (
-        <div>
+        <div className="px-5 lg:px-10">
             <Banner></Banner>
             <OurProducts></OurProducts>
             <AboutUs></AboutUs>
