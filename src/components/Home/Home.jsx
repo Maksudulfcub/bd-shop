@@ -8,7 +8,6 @@ const Home = () => {
         <div className="px-5 lg:px-10">
             <Banner></Banner>
             <OurProducts></OurProducts>
-            <AboutUs></AboutUs>
             <Footer></Footer>
         </div>
     );
