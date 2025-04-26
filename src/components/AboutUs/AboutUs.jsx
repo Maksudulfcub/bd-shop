@@ -4,13 +4,13 @@ const AboutUs = () => {
         <div>
             <div className="hero">
                 <div className="hero-content text-center">
-                    <div className="max-w-md">
+                    <div className="">
                         <h1 className="text-5xl font-bold">About Us</h1>
                         <p className="py-6">
                             BDShop is a children company of CloudCore ltd.
                         </p>
                         <div>
-                            <img src={logo} alt="" />
+                            <img className="w-full" src={logo} alt="" />
                         </div>
                     </div>
                 </div>
