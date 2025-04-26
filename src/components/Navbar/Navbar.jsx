@@ -8,7 +8,7 @@ const Navbar = () => {
         <NavLink className="btn btn-ghost" to="/about">About Us</NavLink>
         <NavLink className="btn btn-ghost" to="/register">Be a Member</NavLink>
     </>
-
+    
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
