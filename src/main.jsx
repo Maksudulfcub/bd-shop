@@ -13,6 +13,7 @@ import AboutUs from './components/AboutUs/AboutUs.jsx';
 import Register from './components/Register/Register.jsx';
 import Login from './components/Login/Login.jsx';
 import ErrorPage from './components/ErrorPage/ErrorPage.jsx';
+import ProductDetails from './components/ProductDetails/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
@@ -39,6 +40,11 @@ const router = createBrowserRouter([
       {
         path: "/login",
         element: <Login></Login>
+      },
+      {
+        path: "/product/:id",
+        element: <ProductDetails></ProductDetails>,
+        loader: () => fetch('https://admin.refabry.com/api/all/product/get')
       }
     ]
   },

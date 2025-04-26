@@ -1,7 +1,8 @@
+import { Link } from "react-router-dom";
 
 const Product = ({ product }) => {
 
-    const { name, price } = product;
+    const { id, name, price } = product;
     const imgUrl = `https://admin.refabry.com/storage/product/7681_1734110373.webp`;
 
     return (
@@ -17,7 +18,9 @@ const Product = ({ product }) => {
                     <h2 className="card-title">{name}</h2>
                     <h3>Price : {price}/- BDT</h3>
                     <div className="card-actions mt-3">
-                        <button className="btn btn-primary">View Details</button>
+                        <Link to={`/product/${id}`}>
+                            <button className="btn btn-primary">View Details</button>
+                        </Link>
                     </div>
                 </div>
             </div>
