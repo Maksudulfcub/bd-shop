@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
 
 const ProductDetails = () => {
 
@@ -9,7 +10,9 @@ const ProductDetails = () => {
     const idInt = parseInt(id)
     const product = products.find(product => product.id === idInt)
 
-    const productImg = `https://admin.refabry.com/storage/product/7681_1734110373.webp`
+    const productImg = `https://admin.refabry.com/storage/product/7681_1734110373.webp`;
+
+    const toastify = () => toast("Added to cart successfully !")
 
     return (
         <div className="px-5 lg:px-10 lg:mt-10">
@@ -31,7 +34,11 @@ const ProductDetails = () => {
 
                             <p className="py-3"><span className="font-bold">Product code : </span>{product.code}</p>
 
-                            <button className="btn btn-primary">Add to cart</button>
+                            <p className="py-3"><span className="font-bold">Discount available : </span>{product.discount_amount}/- Taka</p>
+
+                            <button onClick={toastify} className="btn btn-primary">Add to cart</button>
+
+                            <ToastContainer />
                         </div>
                     </div>
                 </div>
