@@ -3,12 +3,28 @@ import { NavLink } from "react-router-dom";
 const Navbar = () => {
 
     const links = <>
-        <NavLink className="btn btn-ghost" to="/">Home</NavLink>
-        <NavLink className="btn btn-ghost" to="/products">Our Products</NavLink>
-        <NavLink className="btn btn-ghost" to="/about">About Us</NavLink>
-        <NavLink className="btn btn-ghost" to="/register">Be a Member</NavLink>
+        <NavLink to="/"
+            className={({ isActive, isPending }) =>
+                isActive ? 'btn btn-info' : isPending ? 'pending' : 'btn btn-ghost'
+            }>Home
+        </NavLink>
+        <NavLink to="/products"
+            className={({ isActive, isPending }) =>
+                isActive ? 'btn btn-info' : isPending ? 'pending' : 'btn btn-ghost'
+            }>Our Products
+        </NavLink>
+        <NavLink to="/about"
+            className={({ isActive, isPending }) =>
+                isActive ? 'btn btn-info' : isPending ? 'pending' : 'btn btn-ghost'
+            }>About Us
+        </NavLink>
+        <NavLink to="/register"
+            className={({ isActive, isPending }) =>
+                isActive ? 'btn btn-info' : isPending ? 'pending' : 'btn btn-ghost'
+            }>Become a Member
+        </NavLink>
     </>
-    
+
     return (
         <div>
             <div className="navbar bg-base-100 shadow-sm">
